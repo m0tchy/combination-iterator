@@ -26,14 +26,17 @@ int main()
 	}
 	std::cout << std::endl;
 
+	std::vector<double> const seq = { 1.0, -2.5, 30, 0, 3.14 };
+	Combinations<double> const S(seq,3);
+	{
+		for(auto const& v : S)  printVector(v);
+	}
+	std::cout << std::endl;
+
 	std::vector<std::string> const V = { "Alpha", "Beta", "Gamma", "Delta", "Epsilon" };
 	Combinations<std::string> const D(V,3);
 	{
-		std::cout << "By range-based-for" << std::endl;
 		for(auto const& v : D)  printVector(v);
-
-		std::cout << "By iterator" << std::endl;
-		for(auto it = D.begin(); it != D.end(); ++it)  printVector(*it);
 	}
 	std::cout << std::endl;
 }
