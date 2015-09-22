@@ -4,13 +4,15 @@
 
 #include "combinations.hpp"
 
-template<class T>
-void printVector(std::vector<T> const& v)
+namespace
 {
-	for(T const& i : v)  std::cout << i << ' ';
-	std::cout << std::endl;
+	template<class T>
+	void printVector(std::vector<T> const& v)
+	{
+		for(T const& i : v)  std::cout << i << ' ';
+		std::cout << std::endl;
+	}
 }
-
 
 int main()
 {
