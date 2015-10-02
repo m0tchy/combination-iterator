@@ -15,8 +15,8 @@ class Combinations
 public:
 	//! Constructs with values { 0, ..., n - 1 } by std::iota().
 	Combinations(size_t n, size_t k) : 
-		initial_(Sequence<size_t>(k)), 
-		values_(Sequence<size_t>(n)) 
+		initial_(Sequence<IndexType>(k)), 
+		values_(Sequence<ValueType>(n)) 
 	{ assert(n > 0); assert(k < n); };
 
 	//! Constructs with a given vector \a V.

@@ -26,6 +26,13 @@ int main()
 	}
 	std::cout << std::endl;
 
+	std::vector<int> const Ints = { 1, -1, 2, -2, 3, -3 };
+	Combinations<int> const I(Ints,3);
+	{
+		for(auto const& v : I)  printVector(v);
+	}
+	std::cout << std::endl;
+
 	std::vector<double> const seq = { 1.0, -2.5, 30, 0, 3.14 };
 	Combinations<double> const S(seq,3);
 	{
@@ -39,5 +46,7 @@ int main()
 		for(auto const& v : D)  printVector(v);
 	}
 	std::cout << std::endl;
+
+
 }
 
